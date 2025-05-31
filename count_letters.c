@@ -1,30 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    char chaine[100];
+    char c;
     int voyelles = 0, consonnes = 0;
-    
 
-    fgets(chaine, sizeof(chaine), stdin);
+    // Lire les caractères un par un jusqu'au retour à la ligne
+    while (scanf("%c", &c) == 1 && c != '\n') {
+        // Vérifier si c'est une lettre alphabétique
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
 
-    for (int i = 0; chaine[i] != '\0'; i++) {
-        char c = chaine[i];
-        
-        // Vérifier si c'est une lettre
-        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-            /*// Convertir en minuscule pour simplifier la vérification
-            if(c >= 'A' && c <= 'Z') {
-                c = c + 32; // Conversion majuscule -> minuscule
-            }*/
-            
+            // Convertir en minuscule si c'est une majuscule
+            if (c >= 'A' && c <= 'Z') {
+                c = c + 32;
+            }
+
             // Vérifier si c'est une voyelle
-            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y') {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y') {
                 voyelles++;
             } else {
                 consonnes++;
             }
         }
-
     }
 
     printf("Voyelles : %d\n", voyelles);
