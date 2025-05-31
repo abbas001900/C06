@@ -5,7 +5,7 @@ int main() {
     int voyelles = 0, consonnes = 0;
     int i = 0;
 
-    scanf("%s", chaine);
+    scanf("%s", &chaine);
 
     while(chaine[i] != '\0') {
         char c = chaine[i];
