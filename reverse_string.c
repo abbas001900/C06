@@ -11,7 +11,7 @@ int main() {
         longueur++;
     }
     
-    printf("Chaine inversée : ");
+    printf("Chaîne inversée : ");
     for(int i = longueur - 1; i >= 0; i--) {
         printf("%c", chaine[i]);
     }
