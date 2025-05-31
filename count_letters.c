@@ -12,10 +12,10 @@ int main() {
         
         // Vérifier si c'est une lettre
         if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-            // Convertir en minuscule pour simplifier la vérification
+            /*// Convertir en minuscule pour simplifier la vérification
             if(c >= 'A' && c <= 'Z') {
                 c = c + 32; // Conversion majuscule -> minuscule
-            }
+            }*/
             
             // Vérifier si c'est une voyelle
             if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y') {
